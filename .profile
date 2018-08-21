@@ -1,1 +1,1 @@
-/home/aksel/.profile
+export PATH=~/.npm-global/bin:$PATH

@@ -1,1 +1,34 @@
-/home/aksel/.npm-global/lib/node_modules/vtop/themes/wal.json
+{
+	"name": "wal",
+	"author": "aksel",
+	"title": {
+		"fg": "#B55448"
+	},
+	"chart": {
+		"fg": "#B55448",
+		"border": {
+			"type": "line",
+			"fg": "#c1b3c0"
+		}
+	},
+	"table": {
+		"fg": "fg",
+		"items": {
+			"selected": {
+				"bg": "#B55448",
+				"fg": "bg"
+			},
+			"item": {
+				"fg": "fg",
+				"bg": "bg"
+			}
+		},
+		"border": {
+			"type": "line",
+			"fg": "#c1b3c0"
+		}
+	},
+	"footer": {
+		"fg": "fg"
+	}
+}

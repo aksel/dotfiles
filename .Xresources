@@ -1,1 +1,20 @@
-/home/aksel/.Xresources
+Xft.dpi:			144
+Xft.antialias:                  1
+Xft.autohint:                   1
+Xft.hinting:                    1
+Xft.hintstyle:                  hintslight
+Xft.lcdfilter:                  lcddefault
+
+URxvt.font: xft:Droid Sans Mono:pixelsize=16,xft:Inconsolata:pixelsize=16,xft:DejaVu Sans Mono:pixelsize=16,xft:Droid Sans Fallback:pixelsize=16
+URxvt.termName:                 rxvt-256color
+URxvt.title:                    terminal
+URxvt.depth:                    32
+URxvt.internalBorder:           25
+URxvt.iso14755:                 false # CTRL-SHIFT
+URxvt.iso14755_52:              false # CTRL-SHIFT
+URxvt.geometry:                 60x17
+URxvt.scrollBar:                false
+URxvt.loginShell:               true
+
+URxvt.url-launcher:             firefox
+URxvt.matcher.button:           1
