@@ -1,0 +1,1 @@
+/home/aksel/.config/i3blocks/volume.sh
