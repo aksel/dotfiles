@@ -34,7 +34,6 @@ markup=pango
 # The script may be called with -w and -c switches to specify thresholds,
 [cpu_usage]
 label=
-min_width= 00.00%
 align=right
 
 # Memory usage
@@ -43,7 +42,6 @@ align=right
 [memory]
 command=~/.config/i3blocks/memory.sh
 label=
-min_width= 00.00%
 
 [wireless]
 command=~/.config/i3blocks/wifi.sh
@@ -64,5 +62,5 @@ signal=2
 # Date Time
 #
 [time]
-command=date '+%Y-%m-%d %H:%M'
+command=date '+%d. %b %H:%M'
 interval=60
