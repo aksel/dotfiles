@@ -20,7 +20,7 @@ exec_always --no-startup-id feh --bg-center ~/img/wallpaper.png
 # Apply the last colorscheme generated without changing the background by using -n
 exec_always --no-startup-id wal -Rns
 
-# Compton (disabled right now)
+# Compton
 exec_always --no-startup-id compton --config ~/.config/compton.conf -b
 # Re-init compton doesn't work; totally freezes desktop
 # https://github.com/chjj/compton/issues/446
