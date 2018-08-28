@@ -182,7 +182,7 @@ bar {
 }
 
 bar {
-        output secondary
+        output DP1
         position bottom
         status_command i3blocks
         tray_output primary
