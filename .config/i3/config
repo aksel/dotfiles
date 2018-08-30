@@ -202,6 +202,7 @@ bar {
 # Monitor brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id echo $(cat /sys/class/backlight/intel_backlight/brightness)+150 | bc | tee /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
 bindsym XF86MonBrightnessDown exec --no-startup-id echo $(cat /sys/class/backlight/intel_backlight/brightness)-150 | bc | tee /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
+bindsym $mod+XF86MonBrightnessUp exec --no-startup-id cat /sys/class/backlight/intel_backlight/max_brightness >> /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMIN+2 i3blocks
@@ -235,7 +236,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Pause mode "$mode_system"R
+bindsym $mod+Pause mode "$mode_system"
 
 # For exiting
 set $mode_exit Are you sure you want to exit? y/N
