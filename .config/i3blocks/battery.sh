@@ -1,10 +1,10 @@
 #!/bin/bash
 
-level=$(cat /sys/class/power_supply/BAT0/capacity)
-charging=$(cat /sys/class/power_supply/BAT0/status)
+capacity=$(cat /sys/class/power_supply/BAT0/capacity)
+status=$(cat /sys/class/power_supply/BAT0/status)
 symbol=""
 
-case $level in
+case $capacity in
 [0-9])
     symbol=""
     ;;
@@ -31,8 +31,8 @@ case $level in
     ;;
 esac
 
-if [[ "$charging" = "Charging" ]]; then
+if [[ "$status" = "Charging" ]]; then
     symbol="$symbol "
 fi
 
-echo "<span font_desc='FontAwesome'>$symbol</span> $level%"
+echo "<span font_desc='FontAwesome'>$symbol</span> $capacity%"
