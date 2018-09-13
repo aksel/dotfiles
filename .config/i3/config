@@ -15,7 +15,7 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal -name __terminal
 bindsym $mod+Shift+q kill
 
 # Apply a background
-exec_always --no-startup-id feh --bg-center ~/img/wallpaper.png
+exec_always --no-startup-id feh --bg-fill ~/img/wallpaper.png
 
 # Apply the last colorscheme generated without changing the background by using -n
 exec_always --no-startup-id wal -Rns
@@ -55,7 +55,7 @@ bindsym $mod+d exec dmenu_run \
         -nb '$black' \
         -sf '$red' \
         -sb '$black' \
-        -h 32
+        -h 22
 
 # Change focus
 bindsym $mod+Left focus left
@@ -200,8 +200,8 @@ bar {
 }
 
 # Monitor brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id echo $(cat /sys/class/backlight/intel_backlight/brightness)+150 | bc | tee /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
-bindsym XF86MonBrightnessDown exec --no-startup-id echo $(cat /sys/class/backlight/intel_backlight/brightness)-150 | bc | tee /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
+bindsym XF86MonBrightnessUp exec --no-startup-id echo $(cat /sys/class/backlight/intel_backlight/brightness)+5 | bc | tee /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
+bindsym XF86MonBrightnessDown exec --no-startup-id echo $(cat /sys/class/backlight/intel_backlight/brightness)-5 | bc | tee /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
 bindsym $mod+XF86MonBrightnessUp exec --no-startup-id cat /sys/class/backlight/intel_backlight/max_brightness >> /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
 
 # Pulse Audio controls
