@@ -62,5 +62,5 @@ signal=2
 # Date Time
 #
 [time]
-command=date '+%d. %b %H:%M'
+command=date '+%d. %b %H:%M '
 interval=60
