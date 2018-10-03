@@ -3,3 +3,34 @@
 [user]
 	name = aksel
 	email = aksel@akseltorgard.com
+[alias]
+    a = add .
+    ap = add -p
+
+	c = commit -m
+    mend = commit --amend -m
+    
+    d = diff --cached
+
+    s = status -s
+
+	co = checkout
+    nb = checkout -b
+
+    # list branches sorted by last modified
+    b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+    # list aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+
+	pror = remote prune origin
+
+	pr = pull --rebase
+	psu = push --set-upstream
+
+	stashes = stash list
+	unstash = stash pop
+
+	refactor = commit -m 👷Refactor
+	formatting = commit -m 💅Formatting
+	comments = commit -m 📒Comments
