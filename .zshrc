@@ -37,6 +37,7 @@ alias ls='ls --color=auto'
 alias suspend="i3lock -c 000000 && sudo systemctl suspend"
 alias hibernate="i3lock -c 000000 && sudo systemctl hibernate"
 
+alias dotfiles='cd ~/dev/dotfiles'
 # Sets the title of the terminal
 # Useful for terminals running some process that doesn't emit a title
 function set_title() {
