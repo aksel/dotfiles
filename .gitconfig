@@ -34,3 +34,9 @@
 	refactor = commit -m 👷Refactor
 	formatting = commit -m 💅Formatting
 	comments = commit -m 📒Comments
+	
+	rhh = reset --hard HEAD
+	rh = reset --hard
+
+	reword = commit --amend -m
+	
