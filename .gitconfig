@@ -41,3 +41,5 @@
 	reword = commit --amend -m
 	
 	m = merge --no-ff
+[core]
+	editor = vim
