@@ -7,14 +7,14 @@
     a = add .
     ap = add -p
 
-	c = commit -m
-    mend = commit --amend -m
+    c = commit
+    mend = commit --amend
     
     d = diff --cached
 
     s = status -s
 
-	co = checkout
+    co = checkout
     nb = checkout -b
 
     # list branches sorted by last modified
@@ -23,23 +23,23 @@
     # list aliases
     la = "!git config -l | grep alias | cut -c 7-"
 
-	pror = remote prune origin
+    pror = remote prune origin
 
-	pr = pull --rebase
-	psu = push --set-upstream
+    pr = pull --rebase
+    psu = push --set-upstream
 
-	stashes = stash list
-	unstash = stash pop
+    stashes = stash list
+    unstash = stash pop
 
-	refactor = commit -m 👷Refactor
-	formatting = commit -m 💅Formatting
-	comments = commit -m 📒Comments
+    refactor = commit -m 👷Refactor
+    formatting = commit -m 💅Formatting
+    comments = commit -m 📒Comments
 	
-	rhh = reset --hard HEAD
-	rh = reset --hard
+    rhh = reset --hard HEAD
+    rh = reset --hard
 
-	reword = commit --amend -m
+    reword = commit --amend
 	
-	m = merge --no-ff
+    m = merge --no-ff
 [core]
-	editor = vim
+    editor = vim
