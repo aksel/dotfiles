@@ -54,3 +54,7 @@ function toggle_touchpad() {
   integer state=$(xinput list-props 13 | grep "Device Enabled" | grep -o "[0|1]$")
   xinput set-prop 13 "Device Enabled" $(($state^1))
 }
+
+function pm2-log() {
+  tail ~/.pm2/logs/$1-error.log ~/.pm2/logs/$1-out.log --follow
+}
