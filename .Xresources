@@ -16,5 +16,7 @@ URxvt.geometry:                 60x17
 URxvt.scrollBar:                false
 URxvt.loginShell:               true
 
-URxvt.url-launcher:             firefox
+URxvt.url-launcher:             qutebrowser
 URxvt.matcher.button:           1
+
+*dpi:                           144
