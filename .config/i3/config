@@ -160,7 +160,7 @@ for_window [class="^.*"] border pixel 1
 # gaps
 gaps inner 8
 gaps outer 0
-smart_gaps on
+# smart_gaps on
 
 # i3bar
 bar {
@@ -203,6 +203,7 @@ bar {
 bindsym XF86MonBrightnessUp exec --no-startup-id echo $(cat /sys/class/backlight/intel_backlight/brightness)+150 | bc | tee /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
 bindsym XF86MonBrightnessDown exec --no-startup-id echo $(cat /sys/class/backlight/intel_backlight/brightness)-150 | bc | tee /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
 bindsym $mod+XF86MonBrightnessUp exec --no-startup-id cat /sys/class/backlight/intel_backlight/max_brightness >> /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
+bindsym $mod+XF86MonBrightnessDown exec --no-startup-id echo 0 >> /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMIN+2 i3blocks
