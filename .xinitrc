@@ -1,4 +1,7 @@
 #!/bin/sh
+dbus-update-activation-environment --systemd DISPLAY
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap # for disabling weird space, e.g. alt-gr+space no-break shit
 
@@ -9,6 +12,7 @@ fi
 if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
+
 
 source $HOME/.profile
 
