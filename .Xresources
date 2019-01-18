@@ -12,7 +12,7 @@ URxvt.depth:                    32
 URxvt.internalBorder:           25
 URxvt.iso14755:                 false # CTRL-SHIFT
 URxvt.iso14755_52:              false # CTRL-SHIFT
-URxvt.geometry:                 60x17
+URxvt.geometry:                 90x30
 URxvt.scrollBar:                false
 URxvt.loginShell:               true
 
