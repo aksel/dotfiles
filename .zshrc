@@ -33,7 +33,7 @@ bindkey "\e[8~" end-of-line
 bindkey "\e[7~" beginning-of-line
 
 # aliases
-alias ls='ls --color=auto'
+alias ls='pwd && ls --color=auto'
 alias suspend="i3lock -c 000000 && sudo systemctl suspend"
 alias hibernate="i3lock -c 000000 && sudo systemctl hibernate"
 
