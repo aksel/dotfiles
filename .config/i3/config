@@ -157,6 +157,7 @@ mode "$mode_move" {
 # titlebar
 for_window [class="^.*"] border pixel 1
 
+for_window [class="(?i)dolphin"] floating enable
 # gaps
 gaps inner 8
 gaps outer 0
