@@ -253,3 +253,5 @@ bindsym $mod+Shift+E mode "$mode_exit"
 
 bindsym Print exec scrot
 bindsym $mod+Print exec scrot -u
+
+bindsym $mod+u exec sudo systemctl restart uinput-filter.service
