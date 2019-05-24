@@ -54,8 +54,8 @@ function usage() {
 
 # Toggles the touchpad (or whatever device is is number 13 in xinput)
 function toggle_touchpad() {
-  integer state=$(xinput list-props 13 | grep "Device Enabled" | grep -o "[0|1]$")
-  xinput set-prop 13 "Device Enabled" $(($state^1))
+  integer state=$(xinput list-props "DELL07E6:00 06CB:76AF Touchpad" | grep "Device Enabled" | grep -o "[0|1]$")
+  xinput set-prop "DELL07E6:00 06CB:76AF Touchpad" "Device Enabled" $(($state^1))
 }
 
 function pm2-log() {
