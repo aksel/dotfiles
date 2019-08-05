@@ -41,6 +41,8 @@ alias dotfiles='cd ~/dev/dotfiles'
 
 alias spotifyd-restart='systemctl --user restart spotifyd'
 
+alias yt-480='mpv -ytdl-format="[height<=?480]"'
+
 # Sets the title of the terminal
 # Useful for terminals running some process that doesn't emit a title
 function set_title() {
