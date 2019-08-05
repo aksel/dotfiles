@@ -21,7 +21,7 @@ exec_always --no-startup-id feh --bg-center ~/img/wallpaper.png
 exec_always --no-startup-id wal -Rns
 
 # Compton
-exec_always --no-startup-id compton --config ~/.config/compton.conf -b
+# exec_always --no-startup-id compton --config ~/.config/compton.conf -b
 # Re-init compton doesn't work; totally freezes desktop
 # https://github.com/chjj/compton/issues/446
 # exec_always --no-startup-id pkill -USR1 compton
