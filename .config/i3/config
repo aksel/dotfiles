@@ -255,3 +255,5 @@ bindsym Print exec scrot
 bindsym $mod+Print exec scrot -u
 
 bindsym $mod+u exec sudo systemctl restart uinput-filter.service
+
+bindsym $mod+i exec chromium
