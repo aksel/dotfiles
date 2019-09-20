@@ -1,6 +1,12 @@
 #!/bin/bash
 
-name=$(iwgetid -r)
-str=$(cat /proc/net/wireless | tail -n 1 | awk '{print $3}' | rev | cut -c 2- | rev)
+# get active connection, along with its ssid and signal.
+# remove trailing newline
+# cut 'yes:'
 
-echo "<span font_desc='FontAwesome'></span> $name $str%"
+str=$(nmcli -t -f active,ssid,signal device wifi | grep yes | tr '\n' '\0' | cut -d ':' -f 2,3)
+
+if [ -n "$str" ]
+then
+    echo "<span font_desc='FontAwesome'></span> $str%"
+fi
