@@ -46,6 +46,9 @@ label=
 [nordvpn]
 command=~/.config/i3blocks/vpn.js
 
+[ethernet]
+command=~/.config/i3blocks/ethernet.js
+
 [wireless]
 command=~/.config/i3blocks/wifi.sh
 
