@@ -5,7 +5,12 @@ Xft.hinting:                    1
 Xft.hintstyle:                  hintslight
 Xft.lcdfilter:                  lcddefault
 
-URxvt.font: xft:Droid Sans Mono:pixelsize=16,xft:Inconsolata:pixelsize=16,xft:DejaVu Sans Mono:pixelsize=16,xft:Droid Sans Fallback:pixelsize=16
+URxvt.font:     xft:Consolas:pixelsize=18, \
+                xft:Droid Sans Mono:size=10
+
+URxvt.boldFont: xft:Consolas:bold:pixelsize=18, \
+                xft:Droid Sans Mono:bold:size=10
+
 URxvt.termName:                 rxvt-256color
 URxvt.title:                    terminal
 URxvt.depth:                    32
