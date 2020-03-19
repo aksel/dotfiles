@@ -254,8 +254,9 @@ mode "$mode_exit" {
 }
 bindsym $mod+Shift+E mode "$mode_exit"
 
-bindsym Print exec scrot
-bindsym $mod+Print exec scrot -u
+bindsym Print exec --no-startup-id scrot -e 'mv $f ~/img/screenshots/'
+# mod + printscreen; screenshot focused window
+bindsym $mod+Print exec --no-startup-id scrot -u -e 'mv $f ~/img/screenshots/'
 
 bindsym $mod+u exec sudo systemctl restart uinput-filter.service
 
