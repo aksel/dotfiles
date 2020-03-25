@@ -216,8 +216,14 @@ bindsym $mod+Next exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% 
 # Media player controls
 bindsym $mod+Insert exec playerctl play-pause
 bindsym $mod+Home exec playerctl stop
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+
 bindsym $mod+Delete exec playerctl next
+bindsym XF86AudioNext exec playerctl next
+
 bindsym $mod+End exec playerctl previous
+bindsym XF86AudioPrev exec playerctl previos
 
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
