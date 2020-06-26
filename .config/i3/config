@@ -92,6 +92,9 @@ bindsym $mod+space focus mode_toggle
 # Focus the parent container
 bindsym $mod+a focus parent
 
+# Toggle sticky
+bindsym $mod+z sticky toggle
+
 # Switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
