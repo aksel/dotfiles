@@ -29,6 +29,7 @@ separator_block_width=30
 interval=10
 markup=pango
 
+
 # CPU usage
 #
 # The script may be called with -w and -c switches to specify thresholds,
@@ -37,8 +38,6 @@ label=
 align=right
 
 # Memory usage
-#
-# The type defaults to "mem" if the instance is not specified.
 [memory]
 command=~/.config/i3blocks/memory.sh
 label=
@@ -65,8 +64,7 @@ command=~/.config/i3blocks/volume.sh
 interval=once
 signal=2
 
-# Date Time
-#
-[time]
-command=date '+%d. %b %H:%M'
+# Weather. Date & Time
+[weather-time]
+command=~/.config/i3blocks/weather-clock.sh
 interval=60
