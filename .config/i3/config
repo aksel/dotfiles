@@ -269,4 +269,4 @@ bindsym $mod+Print exec --no-startup-id scrot -u -e 'mv $f ~/img/screenshots/'
 
 bindsym $mod+u exec sudo systemctl restart uinput-filter.service
 
-bindsym $mod+i exec chromium
+bindsym $mod+i exec firefox-developer-edition
