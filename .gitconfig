@@ -1,6 +1,6 @@
 [user]
-	name = aksel
-	email = aksel@akseltorgard.com
+    name = aksel
+    email = aksel@akseltorgard.com
 [alias]
     a = add .
     ap = add -p
@@ -41,3 +41,6 @@
     m = merge --no-ff
 [core]
     editor = vim
+    autocrlf = input
+[pull]
+    rebase = true
