@@ -5,3 +5,4 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export SSH_AUTH_SOCK
 export ANDROID_SDK_ROOT=/opt/android-sdk
 export SAM_CLI_TELEMETRY=0
+export MOZ_USE_XINPUT2=1
