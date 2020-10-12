@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# pulseaudio-ctl is broken at the moment
+# disable script momentarily
+
+exit
 read -r -a status <<< "$(pulseaudio-ctl full-status)"
 volume=${status[0]}
 mute=${status[1]}
