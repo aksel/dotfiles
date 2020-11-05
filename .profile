@@ -1,3 +1,5 @@
+export EDITOR="vim"
+export VISUAL="vim"
 export PATH=~/.npm-global/bin:~/.local/bin:$PATH
 export QT_QPA_PLATFORMTHEME=gtk2
 export GDK_DPI_SCALE=1
