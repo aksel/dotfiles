@@ -32,7 +32,7 @@ font pango:Droid Sans Mono 10
 # Set colors from Xresources
 #                       name    resource       placeholder
 set_from_resource       $black  i3wm.color0    #000000
-set_from_resource       $red    i3wm.color3    #ff0000
+set_from_resource       $red    i3wm.color1    #ff0000
 set_from_resource       $blue   i3wm.color4    #0000ff
 set_from_resource       $white  i3wm.color7    #ffffff
 

@@ -34,8 +34,6 @@ bindkey "\e[7~" beginning-of-line
 
 # aliases
 alias ls='pwd && ls --color=auto'
-alias suspend="i3lock -c 000000 && sudo systemctl suspend"
-alias hibernate="i3lock -c 000000 && sudo systemctl hibernate"
 
 alias dotfiles='cd ~/dev/dotfiles'
 

@@ -1,27 +1,20 @@
-Xft.dpi:			144
+*.dpi:                          96
 Xft.antialias:                  1
 Xft.autohint:                   1
 Xft.hinting:                    1
 Xft.hintstyle:                  hintslight
 Xft.lcdfilter:                  lcddefault
 
-URxvt.font:     xft:Consolas:pixelsize=18, \
-                xft:Droid Sans Mono:size=10
-
-URxvt.boldFont: xft:Consolas:bold:pixelsize=18, \
-                xft:Droid Sans Mono:bold:size=10
-
+URxvt.font:                     xft:Consolas:size=10
+URxvt.boldFont:                 xft:Consolas:bold:size=10
 URxvt.termName:                 rxvt-256color
 URxvt.title:                    terminal
 URxvt.depth:                    32
-URxvt.internalBorder:           25
+URxvt.internalBorder:           14
 URxvt.iso14755:                 false # CTRL-SHIFT
 URxvt.iso14755_52:              false # CTRL-SHIFT
 URxvt.geometry:                 90x30
 URxvt.scrollBar:                false
 URxvt.loginShell:               true
-
-URxvt.url-launcher:             qutebrowser
 URxvt.matcher.button:           1
 
-*dpi:                           144
