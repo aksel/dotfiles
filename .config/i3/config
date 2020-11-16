@@ -205,12 +205,11 @@ bar {
                 urgent_workspace $red $red $black
         }
 }
-
 # Monitor brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id echo $(cat /sys/class/backlight/intel_backlight/brightness)+150 | bc | tee /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
-bindsym XF86MonBrightnessDown exec --no-startup-id echo $(cat /sys/class/backlight/intel_backlight/brightness)-150 | bc | tee /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
-bindsym $mod+XF86MonBrightnessUp exec --no-startup-id cat /sys/class/backlight/intel_backlight/max_brightness >> /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
-bindsym $mod+XF86MonBrightnessDown exec --no-startup-id echo 0 >> /sys/class/backlight/intel_backlight/brightness && pkill -RTMIN+1 i3blocks
+bindsym XF86MonBrightnessUp exec --no-startup-id echo $(cat /sys/class/backlight/amdgpu_bl0/brightness)+150 | bc | tee /sys/class/backlight/amdgpu_bl0/brightness && pkill -RTMIN+1 i3blocks
+bindsym XF86MonBrightnessDown exec --no-startup-id echo $(cat /sys/class/backlight/amdgpu_bl0/brightness)-150 | bc | tee /sys/class/backlight/amdgpu_bl0/brightness && pkill -RTMIN+1 i3blocks
+bindsym $mod+XF86MonBrightnessUp exec --no-startup-id cat /sys/class/backlight/amdgpu_bl0/max_brightness >> /sys/class/backlight/amdgpu_bl0/brightness && pkill -RTMIN+1 i3blocks
+bindsym $mod+XF86MonBrightnessDown exec --no-startup-id echo 0 >> /sys/class/backlight/amdgpu_bl0/brightness && pkill -RTMIN+1 i3blocks
 
 # Pulse Audio controls
 bindsym $mod+Prior exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+2 i3blocks
