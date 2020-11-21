@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Toggle mute on left-click
+if [[ $button = 1 ]]; then
+  pamixer -t
+fi
+
+volume=$(pamixer --get-volume)
+muted=$(pamixer --get-mute)
+
+if [[ $muted = "true" ]]; then
+  symbol=""
+elif [[ $volume = "0" ]]; then
+  symbol=""
+elif [[ $volume -lt 60 ]]; then
+  symbol=""
+else
+  symbol=""
+fi
+
+printf " %s %s \n" "$symbol" "$volume"
+printf " %s %s \n" "$symbol" "$volume"
+
+exit
+
+echo "<span>$symbol</span> $volume"
