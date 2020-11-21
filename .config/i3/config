@@ -15,7 +15,7 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal -name __terminal
 bindsym $mod+Shift+q kill
 
 # Apply a background
-exec_always --no-startup-id feh --bg-center ~/img/wallpaper.png
+exec_always --no-startup-id feh --bg-fill ~/img/wallpaper.png
 
 # Apply the last colorscheme generated without changing the background by using -n
 exec_always --no-startup-id wal -Rns

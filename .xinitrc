@@ -20,7 +20,6 @@ source $HOME/.profile
 xinput set-prop 13 "libinput Natural Scrolling Enabled" 1
 xinput set-prop 13 "libinput Tapping Enabled" 1
 
-xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1
-
+xrandr --dpi 96
 # Start i3
 exec i3 --shmlog-size=26214400
