@@ -27,7 +27,7 @@ exec_always --no-startup-id wal -Rns
 # exec_always --no-startup-id pkill -USR1 compton
 
 # Set font
-font pango:Droid Sans Mono 10
+font pango:Consolas 10
 
 # Set colors from Xresources
 #                       name    resource       placeholder
@@ -50,12 +50,13 @@ client.background       $black
 # line height is provided by https://aur.archlinux.org/packages/dmenu-height/
 bindsym $mod+d exec dmenu_run \
         -l 0 \
-        -fn 'Droid Sans Mono-10' \
+        -i \
+        -fn 'Consolas-10' \
         -nf '$white' \
         -nb '$black' \
         -sf '$red' \
         -sb '$black' \
-        -h 32
+        -h 20
 
 # Change focus
 bindsym $mod+Left focus left
@@ -171,28 +172,13 @@ gaps outer 0
 
 # i3bar
 bar {
-        output primary
+        font pango:Consolas 10
         position top
         status_command i3blocks
         tray_output primary
 
-        colors {
-                background $black
-                separator $white
-                statusline $white
-
-                focused_workspace $red $black $red
-                active_workspace $white $black $white
-                inactive_workspace $black $black $white
-                urgent_workspace $red $red $black
-        }
-}
-
-bar {
-        output DP1
-        position bottom
-        status_command i3blocks
-        tray_output primary
+        output primary
+        output nonprimary
 
         colors {
                 background $black
@@ -205,6 +191,7 @@ bar {
                 urgent_workspace $red $red $black
         }
 }
+
 # Monitor brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id echo $(cat /sys/class/backlight/amdgpu_bl0/brightness)+150 | bc | tee /sys/class/backlight/amdgpu_bl0/brightness && pkill -RTMIN+1 i3blocks
 bindsym XF86MonBrightnessDown exec --no-startup-id echo $(cat /sys/class/backlight/amdgpu_bl0/brightness)-150 | bc | tee /sys/class/backlight/amdgpu_bl0/brightness && pkill -RTMIN+1 i3blocks
@@ -212,8 +199,11 @@ bindsym $mod+XF86MonBrightnessUp exec --no-startup-id cat /sys/class/backlight/a
 bindsym $mod+XF86MonBrightnessDown exec --no-startup-id echo 0 >> /sys/class/backlight/amdgpu_bl0/brightness && pkill -RTMIN+1 i3blocks
 
 # Pulse Audio controls
+bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -RTMIN+2 i3blocks
 bindsym $mod+Prior exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+2 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+2 i3blocks
 bindsym $mod+Next exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+2 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+2 i3blocks
 
 # Media player controls
 bindsym $mod+Insert exec playerctl play-pause
@@ -239,10 +229,10 @@ bindsym $mod+l exec $Locker
 set $mode_system System (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     set $PowerLock i3lock -c 000000
-    bindsym s exec --no-startup-id $PowerLock && sudo systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $PowerLock && sudo systemctl hibernate, mode "default"
-    bindsym r exec --no-startup-id sudo systemctl reboot
-    bindsym Shift+s exec --no-startup-id sudo systemctl poweroff -i
+    bindsym s exec --no-startup-id $PowerLock && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $PowerLock && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
