@@ -7,3 +7,4 @@ export SSH_AUTH_SOCK
 export ANDROID_SDK_ROOT=/opt/android-sdk
 export SAM_CLI_TELEMETRY=0
 export MOZ_USE_XINPUT2=1
+export MOZ_X11_EGL=1
