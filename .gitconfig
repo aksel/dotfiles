@@ -1,4 +1,5 @@
 [user]
+    signingKey = 3A571BAA0A4360D624584BDBCE6468DC1FB43A59
     name = aksel
     email = aksel@akseltorgard.com
 [alias]
@@ -44,3 +45,5 @@
     autocrlf = input
 [pull]
     rebase = true
+[commit]
+    gpgsign = true
