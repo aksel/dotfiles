@@ -5,11 +5,11 @@ set $mod Mod4
 floating_modifier $mod
 
 # Open new terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # Open terminal floating
-for_window [instance="__terminal"] floating enable;
-bindsym $mod+Shift+Return exec i3-sensible-terminal -name __terminal
+for_window [instance="Alacritty_float"] floating enable;
+bindsym $mod+Shift+Return exec alacritty --class Alacritty_float
 
 # Close window
 bindsym $mod+Shift+q kill
