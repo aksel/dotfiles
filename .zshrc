@@ -18,9 +18,6 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "^H" backward-delete-word
 
-# aliases
-alias ls='pwd && ls --color=auto'
-
 alias dotfiles='cd ~/dev/dotfiles'
 
 alias spotifyd-restart='systemctl --user restart spotifyd'
@@ -40,3 +37,4 @@ function usage() {
 
 # Load color schemes
 cat ~/.cache/wal/sequences
+
