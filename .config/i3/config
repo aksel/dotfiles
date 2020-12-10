@@ -211,11 +211,11 @@ bindsym $mod+Home exec playerctl stop
 bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 
-bindsym $mod+Delete exec playerctl next
-bindsym XF86AudioNext exec playerctl next
-
-bindsym $mod+End exec playerctl previous
+bindsym $mod+Delete exec playerctl previous
 bindsym XF86AudioPrev exec playerctl previos
+
+bindsym $mod+End exec playerctl next
+bindsym XF86AudioNext exec playerctl next
 
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
