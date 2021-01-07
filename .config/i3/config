@@ -96,17 +96,37 @@ bindsym $mod+a focus parent
 # Toggle sticky
 bindsym $mod+z sticky toggle
 
+##
+## WORKSPACES
+##
+
 # Switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1         workspace 1
+bindsym $mod+mod2+KP_1 workspace 1
+bindsym $mod+2         workspace 2
+bindsym $mod+mod2+KP_2 workspace 2
+bindsym $mod+3         workspace 3
+bindsym $mod+mod2+KP_3 workspace 3
+bindsym $mod+4         workspace 4
+bindsym $mod+mod2+KP_4 workspace 4
+bindsym $mod+5         workspace 5
+bindsym $mod+mod2+KP_5 workspace 5
+bindsym $mod+6         workspace 6
+bindsym $mod+mod2+KP_6 workspace 6
+bindsym $mod+7         workspace 7
+bindsym $mod+mod2+KP_7 workspace 7
+bindsym $mod+8         workspace 8
+bindsym $mod+mod2+KP_8 workspace 8
+
+# Keep Email in ninth workspace
+bindsym $mod+9         workspace 9: Email
+bindsym $mod+mod2+KP_9 workspace 9: Email
+for_window [class="Slack"] move workspace 10: Slack
+
+# Keep Slack in tenth workspace
+bindsym $mod+0 workspace 10: Slack
+bindsym $mod+mod2+KP_0 workspace 10: Slack
+for_window [class="Slack"] move workspace 10: Slack
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -118,11 +138,12 @@ bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+0 move container to workspace 10: Slack
 
 # Go to next/prev workspace
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
+
 
 # Reload the configuration file
 bindsym $mod+Shift+r reload
