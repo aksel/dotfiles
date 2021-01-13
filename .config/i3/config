@@ -121,7 +121,7 @@ bindsym $mod+mod2+KP_8 workspace 8
 # Keep Email in ninth workspace
 bindsym $mod+9         workspace 9: Email
 bindsym $mod+mod2+KP_9 workspace 9: Email
-for_window [class="Slack"] move workspace 10: Slack
+for_window [class="(?i)claws*"] move workspace 9: Email
 
 # Keep Slack in tenth workspace
 bindsym $mod+0 workspace 10: Slack
