@@ -1,8 +1,0 @@
-#!/bin/sh
-
-weather=$(curl -s wttr.in?format=%c,%t)
-w_emoji=$(cut -d "," -f 1 <<< $weather)
-w_temp=$(cut -d "," -f 2 <<< $weather) 
-time=$(date '+%d. %b %H:%M')
-
-echo " <span font_desc='Black'>$w_emoji</span>$w_temp, $time "
