@@ -101,45 +101,45 @@ bindsym $mod+z sticky toggle
 ##
 
 # Switch to workspace
-bindsym $mod+1         workspace 1
-bindsym $mod+mod2+KP_1 workspace 1
-bindsym $mod+2         workspace 2
-bindsym $mod+mod2+KP_2 workspace 2
-bindsym $mod+3         workspace 3
-bindsym $mod+mod2+KP_3 workspace 3
-bindsym $mod+4         workspace 4
-bindsym $mod+mod2+KP_4 workspace 4
-bindsym $mod+5         workspace 5
-bindsym $mod+mod2+KP_5 workspace 5
-bindsym $mod+6         workspace 6
-bindsym $mod+mod2+KP_6 workspace 6
-bindsym $mod+7         workspace 7
-bindsym $mod+mod2+KP_7 workspace 7
-bindsym $mod+8         workspace 8
-bindsym $mod+mod2+KP_8 workspace 8
+bindsym $mod+1         workspace number 1
+bindsym $mod+mod2+KP_1 workspace number 1
+bindsym $mod+2         workspace number 2
+bindsym $mod+mod2+KP_2 workspace number 2
+bindsym $mod+3         workspace number 3
+bindsym $mod+mod2+KP_3 workspace number 3
+bindsym $mod+4         workspace number 4
+bindsym $mod+mod2+KP_4 workspace number 4
+bindsym $mod+5         workspace number 5
+bindsym $mod+mod2+KP_5 workspace number 5
+bindsym $mod+6         workspace number 6
+bindsym $mod+mod2+KP_6 workspace number 6
+bindsym $mod+7         workspace number 7
+bindsym $mod+mod2+KP_7 workspace number 7
+bindsym $mod+8         workspace number 8
+bindsym $mod+mod2+KP_8 workspace number 8
+bindsym $mod+9         workspace "9: Email"
+bindsym $mod+mod2+KP_9 workspace "9: Email"
+bindsym $mod+0         workspace "10: Slack"
+bindsym $mod+mod2+KP_0 workspace "10: Slack"
 
 # Keep Email in ninth workspace
-bindsym $mod+9         workspace 9: Email
-bindsym $mod+mod2+KP_9 workspace 9: Email
-for_window [class="(?i)claws*"] move workspace 9: Email
-for_window [class="(?i)thunderbird*"] move workspace 9: Email
+for_window [class="(?i)claws*"] move workspace "9: Email"
+for_window [class="(?i)thunderbird*"] move workspace "9: Email"
 
 # Keep Slack in tenth workspace
-bindsym $mod+0 workspace 10: Slack
-bindsym $mod+mod2+KP_0 workspace 10: Slack
-for_window [class="Slack"] move workspace 10: Slack
+for_window [class="Slack"] move workspace "10: Slack"
 
 # Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9: Email
-bindsym $mod+Shift+0 move container to workspace 10: Slack
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace "9: Email"
+bindsym $mod+Shift+0 move container to workspace "10: Slack"
 
 # Go to next/prev workspace
 bindsym $mod+Tab workspace next
@@ -278,10 +278,12 @@ bindsym Print exec --no-startup-id scrot -e 'mv $f ~/img/screenshots/'
 # mod + printscreen; screenshot focused window
 bindsym $mod+Print exec --no-startup-id scrot -u -e 'mv $f ~/img/screenshots/'
 
-bindsym $mod+u exec sudo systemctl restart uinput-filter.service
-
 bindsym $mod+i exec firefox-developer-edition
 
 # Shortcut for adding the password manager password to clipboard
 bindsym $mod+p exec --no-startup-id secret-tool lookup 1password akseltorgard | xclip -selection clipboard
 
+# Shortcut for generating a v4 uuid
+bindsym $mod+u exec --no-startup-id uuidgen | xargs echo -n | xclip -selection clipboard
+
+bindsym $mod+b exec i3-input -F 'rename workspace to "%s"' -P 'Rename workspace to: '
