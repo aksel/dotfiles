@@ -4,8 +4,8 @@ used=$(vmstat -s | grep "used memory" | perl -pe 's/\D//g')
 
 memory=$(awk "BEGIN {printf \"%.2f\", $used/$total*100}")
 
-echo "  $memory% "
-echo "  $memory% "
+echo " $memory%"
+echo " $memory%"
 
 # Set URGENT when memory usage is above 80%
 if (( $(bc -l <<< "$memory>80") )); then

@@ -18,8 +18,8 @@ else
   symbol=""
 fi
 
-printf " %s %s \n" "$symbol" "$volume"
-printf " %s %s \n" "$symbol" "$volume"
+printf "%s %s\n" "$symbol" "$volume"
+printf "%s %s\n" "$symbol" "$volume"
 
 exit
 

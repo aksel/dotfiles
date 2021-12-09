@@ -4,10 +4,10 @@
 # remove trailing newline
 # cut 'yes:'
 
-str=$(nmcli -t -f active,ssid,signal device wifi | grep yes | cut -d ':' -f 2,3)
+str=$(nmcli -t -f active,ssid,signal device wifi | grep yes | head -n 1 | cut -d ':' -f 2,3)
 
 if [ -n "$str" ]
 then
-  printf "  %s \n" "$str%"
-  printf "  %s \n" "$str%"
+  printf " %s\n" "$str%"
+  printf " %s\n" "$str%"
 fi

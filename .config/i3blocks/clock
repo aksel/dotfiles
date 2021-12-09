@@ -2,4 +2,4 @@
 
 time=$(date '+%d. %b %H:%M')
 
-echo " $time "
+echo "$time"

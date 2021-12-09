@@ -4,4 +4,4 @@ weather=$(curl -s wttr.in?format=%c,%t)
 emoji=$(cut -d "," -f 1 <<< $weather)
 temp=$(cut -d "," -f 2 <<< $weather) 
 
-echo " $emoji $temp "
+echo "$emoji $temp"

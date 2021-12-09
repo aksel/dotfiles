@@ -22,7 +22,7 @@
 
 # Global properties
 command=~/.config/i3blocks/$BLOCK_NAME
-separator_block_width=14
+separator_block_width=18
 interval=10
 markup=pango
 
@@ -50,6 +50,5 @@ signal=2
 [weather]
 interval=300
 
-# Weather. Date & Time
 [clock]
 interval=60

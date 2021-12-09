@@ -3,8 +3,8 @@
 cpu_usage=$(mpstat -P all 1 1 | tail -1 | awk '{print $12}' | sed "s/,/./" | awk '{print 100.00 - $1}')
 
 # Print short_text, full_text
-printf "  %s \n" "$cpu_usage%"
-printf "  %s \n" "$cpu_usage%"
+printf " %s\n" "$cpu_usage%"
+printf " %s\n" "$cpu_usage%"
 
 # Set URGENT when CPU usage is above 80
 if (( $(bc -l <<< "$cpu_usage>80") )); then

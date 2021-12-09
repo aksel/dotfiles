@@ -4,5 +4,5 @@ current=$(cat /sys/class/backlight/amdgpu_bl0/brightness)
 
 brightness=$((100 * current / max))
 
-printf "  %s \n" $brightness
-printf "  %s \n" $brightness
+printf " %s\n" "$brightness%"
+printf " %s\n" "$brightness%"
